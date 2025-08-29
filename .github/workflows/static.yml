@@ -16,8 +16,8 @@ jobs:
       - run: bun install
       - run: bun run build
       - name: Add CNAME for custom domain
-        run: echo "transfer-repo.github.io" > ./build/CNAME
+        run: echo "transfer-repo.github.io" > ./dist/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
       - uses: actions/deploy-pages@v4
